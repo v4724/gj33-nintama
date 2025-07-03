@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (isMobile()) {
     // --- Mobile Interaction: Tap to select, tap again to open ---
-    instructionsEl.textContent = '點擊攤位可查看名稱，再次點擊可查看宣傳資訊。';
+    instructionsEl.textContent = '點擊查看攤位，再次點擊查看宣傳資訊。';
     
     mapContainer.addEventListener('touchstart', (e: TouchEvent) => {
       const target = e.target as HTMLElement;
