@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GJ33&忍者旅行 忍亂主題宣傳 互動地圖</title>
+  <link rel="stylesheet" href="index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="app">
+    <h1>GJ33&忍者旅行 忍亂主題宣傳 互動地圖</h1>
+    <p class="legend">有宣傳的攤位</p>
+    <p>請與地圖互動以查看攤位資訊。</p>
+    <div id="map-container">
+      <img id="map-image" src="https://gj-events.gjs.tw/rakuran/images/gj33-map-n.png" alt="GJ33 Venue Map">
+      <!-- Stall areas will be injected here by JS -->
+    </div>
+
+  
+    <div class="data-source">
+      <h3>資料來源</h3>
+      <ul>
+        <li><a href="https://www.plurk.com/p/3hfq83ieoj" target="_blank" rel="noopener noreferrer">忍亂主題宣傳集中串</a></li>
+        <li><a href="https://gj-events.gjs.tw/rakuran" target="_blank" rel="noopener noreferrer">忍者旅行100%</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="tooltip" class="hidden" role="tooltip"></div>
+
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true" class="hidden">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <button id="modal-close" aria-label="Close dialog">&times;</button>
+      </div>
+      <div id="modal-body"></div>
+      <div id="modal-footer">
+    </div>
+  </div>
+
+  <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
