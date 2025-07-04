@@ -125,11 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Populate header
     modalTitle.textContent = `${stall.id}: ${stall.name}`;
-    if (stall.promoUser && stall.promoAvatar) {
+    if (stall.promoUser || stall.promoAvatar) {
       const userInfoEl = document.createElement('div');
       userInfoEl.className = 'modal-user-info';
       userInfoEl.innerHTML = `
-        <img src="${stall.promoAvatar}" alt="${stall.promoUser}" class="modal-avatar">
+        <img src="${stall.promoAvatar}" alt=":)" class="modal-avatar">
         <span class="modal-username">${stall.promoUser}</span>
       `;
       modalHeader.appendChild(userInfoEl);
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stall.promoHTML) {
         bodyHTML += stall.promoHTML;
     }
-    modalBody.innerHTML = bodyHTML || '暫無宣傳資訊。';
+    modalBody.innerHTML = bodyHTML || '請參考宣傳噗或社團網站。';
 
 
     // Populate footer
